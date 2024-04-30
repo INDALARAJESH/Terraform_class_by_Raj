@@ -78,8 +78,8 @@ resource "aws_instance" "ec2" {
   subnet_id              = aws_subnet.name.id
   depends_on             = [aws_security_group.sg]
  provisioner "file" {
-    source      = "C:/Users/DELL/.ssh/abc.txt"
-    destination = "/home/ubuntu/abc.txt"
+    source      = "C:/Users/DELL/Desktop/raj.txt"
+    destination = "/home/ubuntu/raj.txt"
   }
   # provisioner "file" {
   #   content     = "I want to copy this string to the destination file server.txt"
@@ -100,5 +100,5 @@ resource "aws_instance" "ec2" {
 resource "aws_key_pair" "deployer" {
   key_name   = "id_rsa"
   public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDZIgnIEXN03RulacvFJDMOUoVr5t7YUo1++gJUfAGMbTcRaQhuCQAxUfxEGyVaJaqKIySAhksm89vUeuIg+I5DcMz48kDphwBnewwS5ivOz88/QkQ2GO0KamnMsjRUsMujYZH/pNaLSQmrLGv4fRUulsKqvSiF0jRsEh+LKD4Bbh6TuEqvs6IbLKYmt7Do0xPXubUie1jyrHapMzJMEBpC8Bbyrs92OFCsfpYEDiOrPjMS2i5Q+SAJziEuEitqg4lBtdBZaEArWUwm+zmXHKXOtQsD5SDiWnXVYphNWXBNAZdRG2YjGlYwDq1bixPFl4zMtPbiB8Pz0xIf+T/2u315 DELL@DESKTOP-RJ70ITN"
-}
 
+}
