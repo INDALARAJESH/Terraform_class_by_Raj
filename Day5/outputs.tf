@@ -1,3 +1,3 @@
-output "publicip" {
+output "instanceid" {
     value = aws_instance.name[*].id
 }
